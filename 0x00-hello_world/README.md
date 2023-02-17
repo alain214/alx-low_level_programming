@@ -1,1 +1,1 @@
- Hello, puts 
+ Positive anything is better than negative nothing
