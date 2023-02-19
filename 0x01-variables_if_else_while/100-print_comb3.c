@@ -1,44 +1,30 @@
 #include <stdio.h>
-
 /**
- * main - prints the numbers from 00 to 99
- * Return: Always 0 (success)
- * main - Prints numbers between 00 to 89.
+ * main - Prints all possible combinations of three different digits,
+ *        in ascending order, separated by a comma followed by a space.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-	int n, m;
-	int i, e;
-
-	for (n = 48; n <= 57; n++)
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	int digit1, digit2, digit3;
+	for (digit1 = 0; digit1 < 8; digit1++)
 	{
-		for (m = 48; m <= 57; m++)
-		i = 48;
-		while (i < 58)
+		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
 		{
-			putchar(n);
-			putchar(m);
-			if (n != 57 || m != 57)
-			if (e != i && e < i)
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+					continue;
+
 				putchar(',');
 				putchar(' ');
 			}
-			i++;
 		}
-		e++;
 	}
 	putchar('\n');
 	return (0);
